@@ -92,11 +92,13 @@
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
         // Copy following script into console inside dev tools at the above link
 
-        // const category = document.querySelector('.mw-category');
-        // const links = Array.from(category.querySelectorAll('a'));
-        // const de = links
-        //     .map(link => link.textContent)
-        //     .filter(streetName => streetName.includes('de '));
+        const category = document.querySelector('.mw-category');
+        if (category != null) {
+            const links = Array.from(category.querySelectorAll('a'));
+            const de = links
+                .map(link => link.textContent)
+                .filter(streetName => streetName.includes('de '));
+        }
 
         // List of links: going to convert to list of names, then going to filter for links that include 'de'
         // Also convert NodeList to array with:
